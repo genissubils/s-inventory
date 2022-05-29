@@ -1,0 +1,458 @@
+@font-face {
+	font-family: Subils;
+	src: url("https://cdn.discordapp.com/attachments/933079123297988678/970048883986141224/BoxedRound.ttf");
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: Subils;
+	color: white;
+}
+
+.ui {
+	position: absolute;
+	right: 4vw;
+	top: 25%;
+	transform: translateY(-50%);
+	height: 30vw;
+	width: 25vw;
+	background-color: rgba(0, 0, 0, .7);
+	box-shadow: 0 0 .5vw black;
+	border-radius: .75vw;
+	animation: show ease-in-out 1.0s forwards;
+}
+
+.slot {
+	top: 10vh;
+	float: left;
+	width: 4.3vw;
+	height: 5.5vw;
+	font-family: Subils;
+	font-size: .9vw;
+	background-color: rgba(40, 40, 40, .85);
+	box-shadow: 0 0 .5vw black;
+	margin: .5vh;
+	border-radius: .4vw;
+	position: relative;
+	animation: show ease-in-out 1.0s forwards;
+}
+
+.slotFast {
+	width: 4.5vw;
+	height: 4.5vw;
+	top: 1vh;
+	position: relative;
+	display: inline-block;
+	border-radius: .4vw;
+	background-color: rgba(40, 40, 40, .85);
+	box-shadow: 0 0 .25vw black;
+	left: .7vh;
+	margin: .8vw;
+}
+
+.slotFast:hover {
+	transition: ease-in 0.5s;
+}
+
+
+#playerInventory {
+	position: absolute;
+	left: 52%;
+	top: 53%;
+	transform: translate(-50%, -50%);
+	width: 25.3vw;
+	height: 50vh;
+	float: left;
+	overflow-y: scroll;
+}
+
+#playerInventoryFastItems {
+	width: 39vw;
+	height: 1.5vh;
+	position: absolute;
+	bottom: 96.4%;
+	left: 0%;
+	z-index: 100;
+	float: left;
+}
+
+#controls {
+	width: 9.6vh;
+	height: 9.6vh;
+	float: center;
+	position: absolute;
+	left: 110%;
+	top: 30%;
+}
+
+#otherInventory {
+	width: 33vw;
+	height: 28vh;
+	float: left;
+	overflow-y: scroll;
+	position: absolute;
+	top: 0%;
+	left: 138%;
+}
+
+#count {
+	border: none;
+	font-size: 1.7vh;
+}
+
+input::-webkiter-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	border-left: 4px solid #27273300;
+}
+
+::-webkit-scrollbar-track {
+	background: #27273300;
+	border-left: 4px solid #27273300;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #1a242d00;
+	border-left: 4px solid #27273300;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #1a242d00;
+	border-left: 4px solid #27273300;
+}
+
+
+.slotfix {
+	float: left;
+	width: 6vw;
+	height: 2vh;
+	background-color: rgb(0, 0, 0);
+	border: 1px solid #000000;
+	margin: 2px;
+	position: relative;
+}
+
+
+.slot:hover {
+	transition: ease-in 0.2s;
+	text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+
+.item,
+.item-other {
+	width: 4vw;
+	height: 9vh;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.item-name {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 5.9vw;
+	min-height: 14px;
+	left: -1.3vh;
+	z-index: 500;
+	font-family: Subils;
+	font-size: 11px;
+	color: white;
+}
+
+.ui-draggable-dragging .item-name,
+.ui-draggable-dragging .item-count {
+	display: none;
+}
+
+.item-count {
+	position: absolute;
+	top: 0;
+	text-align: right;
+	width: 6vw;
+	height: 10px;
+	z-index: 500;
+	font-family: Subils;
+	font-size: 1vh;
+	left: -3.6vh;
+	
+}
+
+.keybind {
+	position: absolute;
+	top: 0;
+	text-align: left;
+	text-align: center;
+	font-family: Subils;
+	width: 2vh;
+	height: 2vh;
+	z-index: 500;
+	color: #ffffff;
+	border-radius: 4px;
+}
+
+.ammoIcon {
+	position: relative;
+	width: 10px;
+	height: 10px;
+}
+
+.controls-div {
+	position: relative;
+	left: 49%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	float: left;
+}
+
+.control1 {
+	position: relative;
+	top: -3vh;
+	left: -58vh;
+	font-family: Subils;
+	width: 3.4vw;
+	height: 4.35vh;
+	border-radius: .4vw;
+	background-color: rgba(0, 0, 0, .7);
+	box-shadow: 0 0 .5vw black;
+	text-align: center;
+	line-height: 41.5px;
+	transition: ease-in 0.2s;
+}
+
+.control2 {
+	position: relative;
+	top: -2vh;
+	left: -58vh;
+	font-family: Subils;
+	width: 3.4vw;
+	height: 4.35vh;
+	border-radius: .4vw;
+	background-color: rgba(0, 0, 0, .7);
+	box-shadow: 0 0 .5vw black;
+	text-align: center;
+	line-height: 41.5px;
+	transition: ease-in 0.2s;
+}
+
+.control3 {
+	position: relative;
+	top: -1vh;
+	left: -58vh;
+	font-family: Subils;
+	width: 3.4vw;
+	height: 4.35vh;
+	border-radius: .4vw;
+	background-color: rgba(0, 0, 0, .7);
+	box-shadow: 0 0 .5vw black;
+	text-align: center;
+	line-height: 41.5px;
+	transition: ease-in 0.2s;
+}
+
+.control4 {
+	position: relative;
+	top: 17.5vh;
+	left: -58vh;
+	font-family: Subils;
+	width: 3.4vw;
+	height: 4.35vh;
+	border-radius: .4vw;
+	background-color: rgba(0, 0, 0, .7);
+	box-shadow: 0 0 .5vw black;
+	text-align: center;
+	line-height: 41.5px;
+	transition: ease-in 0.2s;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.control.disabled {
+	background-color: rgb(131, 2, 2);
+	color: white;
+}
+
+.hoverControl {
+	background-color: rgba(235, 235, 235, 0.1);
+}
+
+.used-item-slot {
+	position: absolute;
+	right: 50px;
+	bottom: 50%;
+	height: 125px;
+	width: 110px;
+	background-color: rgba(124, 124, 124, 0.356);
+	border-style: solid;
+	border-color: rgba(255, 255, 255, 0.2);
+	border-width: 1px 1px 1px 1px;
+	transition: ease-in 0.2s;
+}
+
+#used-item-image {
+	height: 125px;
+	width: 110px;
+	background-image: url(img/used-item.png);
+	background-repeat: no-repeat;
+	background-size: 80%;
+	background-position-x: 0;
+}
+
+.added-item-slot {
+	position: absolute;
+	right: 50px;
+	bottom: 50%;
+	height: -11.5vh;
+	width: 5.7vw;
+	border-style: solid;
+	background-color: rgba(0, 0, 0, .7);
+	box-shadow: 0 0 .5vw black;
+	border-radius: .2vw;
+	border-width: 1px 1px 1px 1px;
+}
+
+#added-item-image {
+	height: 11.5vh;
+	width: 5.7vw;
+	background-image: url(img/added-item.png);
+	background-repeat: no-repeat;
+	background-size: 80%;
+	background-position-x: 0;
+}
+
+.item-name-bg {
+	width: 60%;
+	width: 6vw;
+	height: 20px;
+	position: absolute;
+	bottom: 0;
+}
+
+#playerInventory::-webkit-scrollbar-track,
+#otherInventory::-webkit-scrollbar-track {
+	background-color: none;
+	border: none;
+}
+
+#playerInventory::-webkit-scrollbar,
+#otherInventory::-webkit-scrollbar {
+	width: 0px;
+	background-color: none;
+	border: none;
+}
+
+#playerInventory::-webkit-scrollbar-thumb,
+#otherInventory::-webkit-scrollbar-thumb {
+	background-color: none;
+	border: none;
+}
+
+.nearbyPlayerButton {
+	width: 100%;
+	margin-top: 5px;
+	display: block;
+	text-decoration: none;
+	padding: 2px;
+	background-color: rgba(110, 110, 110, 0.7);
+	border: 1px solid rgba(255, 255, 255, 0.9);
+	text-shadow: none;
+	font-size: 12px !important;
+	text-transform: none;
+	text-align: center;
+	line-height: 30px;
+	border: none;
+}
+
+.nearbyPlayerButton:hover {
+	background-color: rgba(235, 235, 235, 0.1);
+}
+
+#noSecondInventoryMessage {
+	width: 32vw;
+	height: 53.7vh;
+	line-height: 580px;
+	text-align: center;
+}
+
+@media (max-width: 78.1vw) {
+	.inventory {
+		width: 67.7vw;
+	}
+
+	#playerInventory {
+		width: 28.6vw;
+	}
+
+	#controls {
+		width: 52vw;
+	}
+
+	#otherInventory {
+		width: 28.6vw;
+	}
+
+	#noSecondInventoryMessage {
+		width: 28.1vw;
+	}
+}
+
+@media (max-width: 67.7vw) {
+	.inventory {
+		width: 52vw;
+	}
+
+	#playerInventory {
+		width: 22.1vw;
+	}
+
+	#controls {
+		width: 52vw;
+	}
+
+	#otherInventory {
+		width: 22.1vw;
+	}
+
+	#noSecondInventoryMessage {
+		width: 21.8vw;
+	}
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: translateX(4.6vh);
+    }
+    100% {
+        opacity: 100;
+        transform: translateX(0);
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 100;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(4.6vh);
+    }
+}
