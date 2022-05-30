@@ -84,7 +84,10 @@ local fastWeapons = {
     [2] = nil,
     [3] = nil
 }
-
+RegisterNetEvent('esx:playerLoaded')
+AddEventHandler('esx:playerLoaded', function(playerData)
+closeInventory()
+end)
 Citizen.CreateThread(
     function()
         while ESX == nil do
