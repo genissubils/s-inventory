@@ -21,7 +21,6 @@
 	background-color: rgba(0, 0, 0, .7);
 	box-shadow: 0 0 .5vw black;
 	border-radius: .75vw;
-	animation: show ease-in-out 1.0s forwards;
 }
 
 .slot {
@@ -36,7 +35,6 @@
 	margin: .5vh;
 	border-radius: .4vw;
 	position: relative;
-	animation: show ease-in-out 1.0s forwards;
 }
 
 .slotFast {
@@ -434,26 +432,4 @@ input::-webkit-inner-spin-button {
 	#noSecondInventoryMessage {
 		width: 21.8vw;
 	}
-}
-
-@keyframes show {
-    0% {
-        opacity: 0;
-        transform: translateX(4.6vh);
-    }
-    100% {
-        opacity: 100;
-        transform: translateX(0);
-    }
-}
-
-@keyframes hide {
-    0% {
-        opacity: 100;
-        transform: translateX(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(4.6vh);
-    }
 }
