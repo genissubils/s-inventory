@@ -11,6 +11,7 @@
 }
 
 .ui {
+	display: none;
 	position: absolute;
 	right: 4vw;
 	top: 25%;
