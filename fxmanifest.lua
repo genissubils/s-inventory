@@ -1,11 +1,7 @@
 fx_version 'adamant'
-
 games { 'gta5' }
-
-author 'TusMuertos.#4903'
-
-description "Rediseño echo enteramente por TusMuertos.#4903"
-
+author 'tetesubi#9937'
+ 
 ui_page "html/ui.html"
 
 client_scripts {
